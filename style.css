@@ -43,3 +43,11 @@ body{
 .sexoStudent{
     border-color: #ed6a6a;
 }
+.tableSroll::-webkit-scrollbar{
+    width: 5px;
+    height: 6px;
+}
+.tableSroll::-webkit-scrollbar-thumb{
+    background: #c1c1c1;
+    border-radius: 10px;
+}
