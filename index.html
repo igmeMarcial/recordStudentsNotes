@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentNotes</title>
+    <link rel="shortcut icon" type="image/png" href="./images/js.png"/>
+    <link rel="stylesheet" href="./style.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+</head>
+<body >
+    <div class="head">
+        <main class="container">
+            <nav>
+                <ul>
+                  <li><div id="btnRegister" href="#" role="button" class="outline">Registrar</div></li>
+                </ul>
+                <ul>
+                  <li><strong>Registro de Notas</strong></li>
+                </ul>
+                <ul>
+                  <li><div class="listStudentButton"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-list-check" width="26" height="26" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M3.5 5.5l1.5 1.5l2.5 -2.5"></path>
+                    <path d="M3.5 11.5l1.5 1.5l2.5 -2.5"></path>
+                    <path d="M3.5 17.5l1.5 1.5l2.5 -2.5"></path>
+                    <path d="M11 6l9 0"></path>
+                    <path d="M11 12l9 0"></path>
+                    <path d="M11 18l9 0"></path>
+                 </svg></div></li>
+                </ul>
+              </nav>
+        </main>
+    </div>
+    <div class="infoContainer">
+        <main class="container" id="infoContainerMain">
+            <form id="formStudent">       
+                <div class="grid">             
+                  <label for="firstname">
+                    Nombres
+                    <input   type="text" id="firstname" name="firstname" placeholder="First name" required>
+                  </label>            
+                  <label for="lastname">
+                    Apellidos
+                    <input  type="text" id="lastname" name="lastname" placeholder="Last name" required>
+                  </label>       
+                </div >   
+                <div class="grid">
+                    <label for="date">Fecha de nacimiento
+                        <input type="date" id="date" name="dateOfBirth">
+                    </label>
+                    <label for="sexo"> Sexo
+                        <select id="sexoStudent" required>
+                            <option value="noSelect" selected>Seleciona el sexo...</option>
+                            <option value="M">Masculino
+                            </option>
+                            <option value="F">Femenino
+                            </option>
+                        </select>
+                    </label>
+                </div>    
+                <small>Ingrese las cuatro notas:</small>                         
+                <article >
+                    <div class="grid">
+                        <label for="firstNote">
+                            Nota1
+                            <input   type="text" id="firstNote" name="firstNote" placeholder="Nota 1" required>
+                        </label> 
+                        <label for="secondNote">
+                            Nota2
+                            <input  type="text" id="secondNote" name="secondNote" placeholder="Nota 2" required>
+                        </label> 
+                        <label for="threeNote">
+                            Nota3
+                            <input   type="text" id="threeNote" name="threeNote" placeholder="Nota 3" required>
+                        </label> 
+                        <label for="fourNote">
+                            Nota4
+                            <input   type="text" id="fourNote" name="fourNote" placeholder="Nota 4" required>
+                        </label> 
+                    </div>
+                </article>
+                   
+                <button type="submit">Registrar</button>
+              
+            </form>
+            <article  id="notList">
+              <small>Aún no hay registrados</small>
+            </article>    
+            <div id="tableStudents">
+              <table role="grid" >
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Sexo</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">Promedio</th>
+                    <th scope="col">Estado</th>                
+                  </tr>
+                </thead>
+                <tbody id="rowListContainer">
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                  </tr>              
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                  </tr>
+                </tfoot>
+              </table>
+            </div> 
+            
+          <article id="informationAll"><h4>Información General</h4>
+              <table role="grid">
+                  <tbody>
+                    <tr>
+                      <th scope="row">Total Alumnos:</th>
+                      <td class="resultAllStudent">Cell</td>                                            
+                    </tr>
+                    <tr>
+                      <th scope="row">Total aprobados:</th>
+                      <td class="resultAllAprobados">Cell</td>                                            
+                    </tr>
+                    <tr>
+                      <th scope="row">Total Desaprobados</th>
+                      <td class="resultAllDesAprobados">Cell</td>                       
+                    </tr>
+                    <tr>
+                      <th scope="row">Promedio de notas total:</th>
+                      <td class="resultPromedyTotal">Cell</td>                     
+                    </tr>
+                  </tbody>
+                  
+              </table>
+          </article>
+        </main>
+        <template id="templateListStudents">
+          <tr>
+            <th scope="row" class="numberLista">1</th>
+            <td class="nameT">Cell</td>
+            <td class="lastNameT">Cell</td>
+            <td class="sexT">Cell</td>
+            <td class="ageT">Cell</td>
+            <td class="promedioT">Cell</td>
+            <td class="stateT">Cell</td>
+          </tr>   
+        </table>
+        </template>
+        <template id="templateModal">
+          <dialog id="modal-example" open="true">
+            <article>
+              <span href="#close"
+                aria-label="Close"
+                class="close"
+                data-target="modal-example"
+                id="closeIconModal"
+                >
+            </span>
+              <h4>Estudiante: <strong>Marcial Igme Chillca</strong></h4>
+              <div class="profile-card__txt">Fecha de Registro: <strong>00:00</strong></div>
+              <cite class="secondary">Registro exitoso</cite>
+              <footer>
+                <span href="#confirm"
+                  role="button"
+                  data-target="modal-example"
+                  id="btnViewList">
+                  Ver en la lista
+              </span>
+              </footer>
+            </article>
+          </dialog>
+        </template>
+       
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>

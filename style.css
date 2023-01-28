@@ -1,0 +1,45 @@
+@font-face {
+    font-family: myFont;
+    src: url(./fonts/Degarism\ Studio\ -\ Alliance\ No.1\ Light.otf);
+}
+body{
+    font-family: myFont;
+}
+.head{
+    box-shadow: 0 16px 71px 0 rgb(119 118 122 / 15%);
+    margin-bottom: 50px;
+}
+.imgLogo{
+    width: 50px;
+    background-image: linear-gradient(270deg,#f09090,#3512b2);
+    -webkit-background-clip: text;
+    background-clip: text;
+   
+}
+.listStudentButton{
+    cursor: pointer;
+}
+#notList{
+    display: none;
+
+}
+#closeIconModal{
+    cursor: pointer;
+}
+#formStudent{
+    display: block;
+}
+#tableStudents{
+    display: none;
+
+}
+
+#informationAll{
+    display: none;
+}
+.colorTextStident{
+    color: #ed6a6a;
+}
+.sexoStudent{
+    border-color: #ed6a6a;
+}
